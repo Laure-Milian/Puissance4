@@ -1,0 +1,31 @@
+
+.container {
+	margin : 0 auto;
+	width : 1200px;
+}
+
+.empty {
+	background-color: grey;
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+}
+
+.red {
+	background-color: red;
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+}
+
+.yellow {
+	background-color: yellow;
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+}
+
+button {
+	width: 100%;
+}
+
