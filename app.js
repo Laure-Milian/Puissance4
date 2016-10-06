@@ -7,21 +7,20 @@
 		valeur_case = $(this).data("type");
 
 		if (count % 2 === 1 && valeur_case === "clickOK") {
-			$(this).removeClass("empty");
-			$(this).addClass("red");
-			$(this).data("type", "clickForbidden");			
-			$(this).prev().data("type", "clickOK");
-
+			changeCouleur(this, "red");
 		} else if (valeur_case === "clickOK") {
-			$(this).removeClass("empty");
-			$(this).addClass("yellow");
-			$(this).data("type", "clickForbidden");
-			$(this).prev().data("type", "clickOK");
-
+			changeCouleur(this, "yellow");
 		} else {
 			count = count - 1;
 		}
 
 	});
+
+	function changeCouleur(caseVide, couleur) {
+			$(caseVide).removeClass("empty");
+			$(caseVide).addClass(couleur);
+			$(caseVide).data("type", "clickForbidden");			
+			$(caseVide).prev().data("type", "clickOK");
+	}
 
 })();
